@@ -1,0 +1,10 @@
+A AvadaKedavra 100
+A Crucio 40
+A Imperio 20
+A sheild 0
+H Reducto 60
+H Fiendfyre 50
+H Nebulus 40
+V Taboo 80
+V Expulso 60
+V Confringo 55
