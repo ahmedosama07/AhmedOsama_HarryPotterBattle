@@ -57,11 +57,6 @@ while harry.health > 0 and voldemort.health > 0:
     print(f"Health : {harry_power}                      {voldemort_power}")
     print(f"Energy : {harry_energy}                      {voldemort_energy}")
 
-    # if a wizard uses all his energy he dies
-    if harry_energy == 0 and voldemort_energy > 0:
-        harry_power = 0
-    elif harry_energy > 0 and voldemort_energy == 0:
-        voldemort_power = 0
 
 # game end
 if harry.health == 0 and voldemort.health != 0:

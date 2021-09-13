@@ -33,6 +33,7 @@ class Wizard:
             self.energy = self.energy - power
             if self.energy < 0:
                 self.energy = 0
+                return 0
             if opponent_shield:
                 return 0
             else:
