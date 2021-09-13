@@ -6,7 +6,7 @@ harry = Wizard("Harry Potter")
 voldemort = Wizard("Voldemort")
 
 # game loop
-while harry.health > 0 and voldemort.health > 0:
+while harry.wizard_health() > 0 and voldemort.wizard_health() > 0:
     # reading spells as input
     print("Enter the two spells (harry then voldemort)")
     harry_spell, voldemort_spell = input().split()
@@ -57,9 +57,14 @@ while harry.health > 0 and voldemort.health > 0:
     print(f"Health : {harry_power}                      {voldemort_power}")
     print(f"Energy : {harry_energy}                      {voldemort_energy}")
 
+    # if the two wizards have zero energy then it's a tie
+    if harry_energy == 0 and voldemort_energy == 0 and harry_power > 0 and voldemort_power > 0:
+        print("tie")
+        break
+
 
 # game end
-if harry.health == 0 and voldemort.health != 0:
+if harry.wizard_health() == 0 and voldemort.wizard_health() != 0:
     voldemort.winner()
-elif harry.health != 0 and voldemort.health == 0:
+elif harry.wizard_health() != 0 and voldemort.wizard_health() == 0:
     harry.winner()
